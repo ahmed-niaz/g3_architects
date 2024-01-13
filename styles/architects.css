@@ -76,7 +76,8 @@ nav li a {
 .banner img {
   width: 100%;
 }
-main {
+main,
+footer {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -96,7 +97,9 @@ main {
   padding: 0 4.375rem;
 }
 
-.features-title ,.sponsors-title,.more-features-title{
+.features-title,
+.sponsors-title,
+.more-features-title {
   font-size: 2.813rem;
   margin-bottom: 1.5rem;
 }
@@ -115,41 +118,43 @@ main {
   line-height: 1.625rem;
 }
 
-.more-features{
+.more-features {
   margin: 8.125rem 0;
   display: flex;
   gap: 9.125rem;
 }
-.more-features-title{
+.more-features-title {
   border-left: 5px solid #ff900e;
-padding-left: 1.125rem;
+  padding-left: 1.125rem;
 }
-.more-features-list .card{
-  width: 586px;
-height: 171px;
-margin-top: 2rem;
+.more-features-list .card {
+  margin-top: 2rem;
   border-radius: 8px;
-background: #FFF;
-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  padding: 3rem;
 }
-.experience-badge{
+.features-card-title {
+  margin-bottom: 0.875rem;
+}
+.experience-badge {
   width: 21.375rem;
-height: 12.5rem;
+  height: 12.5rem;
   border-radius: 8px;
-background: #FF900E;
-text-align: center;
-position: relative;
-bottom: 8.25rem;
-right: 7.25rem;
+  background: #ff900e;
+  text-align: center;
+  position: relative;
+  bottom: 8.25rem;
+  right: 7.25rem;
 }
 
-.experience-badge h2{
+.experience-badge h2 {
   font-size: 4rem;
   color: #fff;
   padding-top: 2.75rem;
 }
 
-.experience-badge p{
+.experience-badge p {
   color: #fff;
   font-size: 1.5rem;
 }
@@ -168,12 +173,12 @@ right: 7.25rem;
   height: 15.125rem;
   text-align: center;
 }
-.card img{
+.card img {
   margin-top: 2.75rem;
 }
 .card-title {
   color: var(--Dark-03, #727272);
-  font-size:1.25rem ;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 .card-stats {
@@ -182,25 +187,30 @@ right: 7.25rem;
   color: #424242;
   margin-top: 1.25rem;
 }
-.sponsors{
+.sponsors {
   text-align: center;
 }
 
-.sponsors-img-container{
+.sponsors-img-container {
   display: flex;
   justify-content: space-evenly;
   margin-top: 3.125rem;
 }
 
-.sponsors-img-container img{
+.sponsors-img-container img {
   width: 10.313rem;
 }
+footer {
+  margin: 8.125rem auto;
+  border-radius: 8px;
+  background: #fff4e7;
+  border: none;
+}
 
-
-
-
-
-
+footer p {
+  text-align: center;
+  padding: 40px;
+}
 
 /* media Queries */
 @media screen and (max-width: 576px) {
@@ -208,7 +218,10 @@ right: 7.25rem;
     padding: 10px;
   }
   nav,
-  .features ,.facts-card-container ,.sponsors-img-container{
+  .features,
+  .facts-card-container,
+  .sponsors-img-container,
+  .more-features {
     flex-direction: column;
   }
 
@@ -221,18 +234,30 @@ right: 7.25rem;
   /* .facts-card-container {
     padding: 2rem;
   } */
-  .card{
-    padding:2.5rem 3.125rem;
+  .card {
+    padding: 2.5rem 3.125rem;
     margin-top: 0px;
   }
 
-  .sponsors-img-container{
+  .sponsors-img-container {
     align-items: center;
     gap: 1.5rem;
   }
-
-
-  
+  .more-features-list .card {
+    margin: 1rem 2rem;
+  }
+  .more-features-img img {
+    width: 100%;
+  }
+  .more-features-description {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .experience-badge {
+    position: relative;
+    top: 2rem;
+    left: 2.5rem;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 960px) {
@@ -240,8 +265,35 @@ right: 7.25rem;
     padding: 50px;
   }
   nav,
-  .features {
+  .features,
+  .more-features {
     flex-direction: column;
-
   }
+  .more-features-list .card {
+    margin: 1rem 3rem;
+  }
+
+  .more-features-description {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .experience-badge {
+    position: relative;
+    top: 2rem;
+    left: 15rem;
+  }
+
+  .sponsors-img-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .footer {
+    width: 50%;
+  }
+}
+
+.hide {
+  display: none;
 }
